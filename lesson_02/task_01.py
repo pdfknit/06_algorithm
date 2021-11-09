@@ -20,5 +20,7 @@ while True:
             result = a / b
     elif op == '*':
         result = a * b
+    else:
+        result = 'Неверная операция'
 
     print(result)

@@ -8,7 +8,6 @@ def count_sum(digit, even_sum=0, uneven_sum=0):
             even_sum += cur_element
         else:
             uneven_sum += cur_element
-        new_digit = digit // 10
         even_sum, uneven_sum = count_sum(digit // 10, even_sum, uneven_sum)
     return even_sum, uneven_sum
 
