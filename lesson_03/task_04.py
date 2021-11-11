@@ -11,10 +11,10 @@ print(f'{array = }')
 max_index = None
 
 for i in range(1, len(array)):
-    if array[i] < 0:
-        if not max_index:
+    if max_index is None:
+        if not max_index and array[i] < 0:
             max_index = i
-        elif array[i] > array[max_index]:
+        elif 0 > array[i] > array[max_index]:
             max_index = i
-
-print(f'max_value = {array[max_index]}, index = {max_index}')
+if max_index != None:
+    print(f'max_value = {array[max_index]}, index = {max_index}')

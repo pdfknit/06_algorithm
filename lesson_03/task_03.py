@@ -10,8 +10,8 @@ array = [random.randint(MIN_ITEM, MAX_ITEM) for _ in range(SIZE)]
 
 result = {}
 for i in range(len(array)):
-    if array[i] in result.keys():
-        result[array[i]] = result[array[i]] + 1
+    if array[i] in result:
+        result[array[i]] += 1
     else:
         result[array[i]] = 1
 

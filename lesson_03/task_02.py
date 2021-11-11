@@ -17,7 +17,5 @@ for i in range(1, len(array)):
     elif array[i] > array[max_index]:
         max_index = i
 
-max_value = array[max_index]
-array[max_index] = array[min_index]
-array[min_index] = max_value
+array[max_index], array[min_index] = array[min_index], array[max_index]
 print(f'{array = }')
