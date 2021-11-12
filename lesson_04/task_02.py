@@ -97,6 +97,9 @@ for test in range(3_103, 9_100, 2000):
     print(timeit.timeit('primes_02(test)', number=1000, globals=globals()), end='\n\n')
 
 '''
+
+Графики: https://docs.google.com/spreadsheets/d/1jD-X8WmfwoghxEAxCCclgmC7oL213nQ3glQfaw0fk_o/edit?usp=sharing
+
 Вывод: Решето Эратосфена работает быстрее, чем классический метод нахождения простых чисел. 
 И чем больше значения, тем больше разницы. По форме графика похоже, что классический метод за счет вложенного цикла усложняется нелинейно, 
 что еще больше невыгодно.
