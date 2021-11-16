@@ -49,9 +49,15 @@ def hex_sum(a, b):
     for digit in result_deque:
         result_list.append(vocabulary[digit])
 
-    return ''.join(result_list)
+    return result_list
+    # return ''.join(result_list)
+
+try:
+    a = input('Введите 16-ричное число:\n')
+    b = input('Введите 16-ричное число:\n')
+
+    print(f'{deque(a)} + {deque(b)} = {hex_sum(a, b)}')
+except:
+    print('Введены данные, которые невозможно посчитать')
 
 
-a = input('Введите 16-ричное число:\n')
-b = input('Введите 16-ричное число:\n')
-print(hex_sum(a, b))
