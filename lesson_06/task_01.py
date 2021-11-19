@@ -16,7 +16,6 @@ def find_memory_sum(all_variables_dict):
     return memory_sum
 
 
-
 def rand_array(size, min, max):
     array = [random.randint(min, max) for _ in range(size)]
     print(f'Сумма памяти {rand_array.__name__} = {find_memory_sum(dict(locals()))}')
@@ -54,7 +53,6 @@ def find_summ_01(array):
 
 
 def find_summ_02(array):
-
     for idx, el in enumerate(array):
         if min(array) == el:
             min_index = idx
@@ -69,8 +67,8 @@ def find_summ_02(array):
     print('Сумма элементов между максимальным и минимальным = ', array)
     print(f'Сумма памяти {find_summ_02.__name__} = {find_memory_sum(dict(locals()))}')
 
-def find_summ_03(array):
 
+def find_summ_03(array):
     for idx, el in enumerate(array):
         if min(array) == el:
             min_index = idx
@@ -87,7 +85,6 @@ def find_summ_03(array):
     print(f'Сумма памяти {find_summ_03.__name__} = {find_memory_sum(dict(locals()))}')
 
 
-
 array = rand_array(1000, 1, 10000)
 print('_' * 55)
 find_summ_01(array)
@@ -95,7 +92,6 @@ print('_' * 55)
 find_summ_02(array)
 print('_' * 55)
 find_summ_03(array)
-
 
 rand_array(10, 1, 100)
 
@@ -117,9 +113,6 @@ array, а результат считается по финальным пере
 из всех элементов, которые необходимо суммировать) и количество памяти растет линейно с ростом последовательности.
 Пики на графике 3-го решения вызван тем, что расстояние между мин и макс индексами может варьироваться независимо от длины массива
 '''
-
-
-
 
 # Сумма памяти rand_array = 274
 # Сумма памяти find_summ_01 = 316
@@ -156,4 +149,3 @@ array, а результат считается по финальным пере
 # Сумма памяти find_summ_01 = 18594
 # Сумма памяти find_summ_02 = 72
 # Сумма памяти find_summ_03 = 34278
-
